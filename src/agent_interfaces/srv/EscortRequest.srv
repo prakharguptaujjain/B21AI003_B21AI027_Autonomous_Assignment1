@@ -1,0 +1,10 @@
+string visitor_id
+string building_location
+string room_number
+bool oosrequest
+int32 oosmeettime
+---
+bool success
+string message
+string path
+int32 ooswaittime

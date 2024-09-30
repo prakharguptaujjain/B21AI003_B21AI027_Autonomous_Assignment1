@@ -1,0 +1,14 @@
+[INFO] [1727707403.318299227] [visitor_agent]: Visitor Agent is ready.
+[INFO] [1727707403.697198535] [visitor_agent]: Publishing visitor agent marker at (0.0, -1.0)
+[INFO] [1727707403.698015748] [visitor_agent]: oos request: 0
+[INFO] [1727707404.699479265] [visitor_agent]: Requesting escort to Building_B room 1
+[INFO] [1727707404.700256777] [visitor_agent]: Loaded picklessss: {'success': True, 'message': 'Path found', 'path': ['Main_Gate', 'Building_A_Entrance', 'Building_B_Entrance'], 'mode': 'vehicle'}
+[INFO] [1727707404.700861287] [visitor_agent]: lamdas: [0.0, 0.2, 0.4, 0.6000000000000001, 0.8]
+[INFO] [1727707404.701294093] [visitor_agent]: New positions: [(-0.22360679774997896, -0.4472135954999579), (0.7763932022500211, 1.5527864045000421), (1.776393202250021, 3.552786404500042), (2.7763932022500213, 5.552786404500043), (4.776393202250021, 9.552786404500042)]
+[INFO] [1727707409.708633475] [visitor_agent]: lamdas: [0.0, 0.3333333333333333, 0.6666666666666666]
+[INFO] [1727707409.709209184] [visitor_agent]: New positions: [(4.646446609406726, 9.646446609406727), (6.313113276073392, 11.313113276073393), (9.646446609406727, 14.646446609406727)]
+[INFO] [1727707414.719049928] [visitor_agent]: Moving agent to position ([])
+[INFO] [1727707414.719636037] [visitor_agent]: Success result
+[INFO] [1727707414.720364948] [visitor_agent]: Escort request completed for visitor visitor_1
+[INFO] [1727707414.720871556] [visitor_agent]: Shutting down Visitor Agent...
+[INFO] [1727707414.722634783] [visitor_agent]: Visitor marker removed from RViz.

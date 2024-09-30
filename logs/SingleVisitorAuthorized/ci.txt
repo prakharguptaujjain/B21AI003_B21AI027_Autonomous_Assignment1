@@ -1,0 +1,19 @@
+[INFO] [1727706990.576066885] [ci_agent]: CI Agent is ready.
+[INFO] [1727706992.281644396] [ci_agent]: Received escort request from visitor visitor_957 to building Building_C
+[INFO] [1727706992.282644676] [ci_agent]: Path to Building_C_Entrance: ['Main_Gate', 'Building_C_Entrance']
+[INFO] [1727706992.283904152] [ci_agent]: Escorting visitor visitor_957 to Building_C
+[INFO] [1727706992.284546839] [ci_agent]: Path to building: ['Main_Gate', 'Building_C_Entrance']
+[INFO] [1727706993.286773547] [ci_agent]: lamdas: [0.0, 0.14285714285714285, 0.2857142857142857, 0.42857142857142855, 0.5714285714285714, 0.7142857142857142, 0.8571428571428571]
+[INFO] [1727706993.287214457] [ci_agent]: New positions: [(0.0, 0.0), (2.142857142857143, 0.7142857142857142), (4.285714285714286, 1.4285714285714284), (6.428571428571428, 2.142857142857143), (8.571428571428571, 2.8571428571428568), (10.714285714285714, 3.571428571428571), (15.0, 5.0)]
+[INFO] [1727707000.299599151] [ci_agent]: Requesting navigation to Building_C_Room3
+[INFO] [1727707001.301733857] [ci_agent]: Navigation result received: authorized=True, path=['Building_C_Entrance', 'Building_C_Room1', 'Building_C_Room2', 'Building_C_Room3']
+[INFO] [1727707001.302385871] [ci_agent]: Path to building saved to /tmp/visitor_957_path.pkl_ci
+[INFO] [1727707001.303126786] [ci_agent]: Navigation result: {'authorized': True, 'path': "['Building_C_Entrance', 'Building_C_Room1', 'Building_C_Room2', 'Building_C_Room3']"}
+[INFO] [1727707001.303679798] [ci_agent]: Escorting visitor visitor_957 to Building_C_Room3
+[INFO] [1727707001.304286711] [ci_agent]: Path to building_room: ['Building_C_Entrance', 'Building_C_Room1', 'Building_C_Room2', 'Building_C_Room3']
+[INFO] [1727707001.304828123] [ci_agent]: lamdas: []
+[INFO] [1727707001.305353034] [ci_agent]: New positions: [(16.0, 5.0)]
+[INFO] [1727707002.307317836] [ci_agent]: lamdas: []
+[INFO] [1727707002.308157553] [ci_agent]: New positions: [(17.0, 5.0)]
+[INFO] [1727707003.310027553] [ci_agent]: lamdas: []
+[INFO] [1727707003.310485863] [ci_agent]: New positions: [(18.0, 5.0)]

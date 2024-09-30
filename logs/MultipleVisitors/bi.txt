@@ -1,0 +1,9 @@
+[INFO] [1727710640.970631368] [bi_agent]: BI Agent is ready.
+[INFO] [1727710650.340701661] [bi_agent]: Received navigation request for visitor visitor_4 to Building_C_Room1
+[INFO] [1727710650.341269869] [bi_agent]: Access granted to visitor visitor_4 for Building_C_Room1, Path: ['Building_C_Entrance', 'Building_C_Room1']
+[INFO] [1727710650.341926879] [bi_agent]: Created pickle at/tmp/{visitor_id}_path.pkl_bi
+[INFO] [1727710661.366072940] [bi_agent]: Received navigation request for visitor visitor_32 to Building_B_Room1
+[INFO] [1727710661.366845851] [bi_agent]: Access granted to visitor visitor_32 for Building_B_Room1, Path: ['Building_B_Entrance', 'Building_B_Room1']
+[INFO] [1727710661.367747364] [bi_agent]: Created pickle at/tmp/{visitor_id}_path.pkl_bi
+[INFO] [1727710672.396868974] [bi_agent]: Received oos navigation request for visitor visitor_41 to Building_B_Room1
+[INFO] [1727710672.397390682] [bi_agent]: Locking oos for 33 seconds for Building_B_Room1

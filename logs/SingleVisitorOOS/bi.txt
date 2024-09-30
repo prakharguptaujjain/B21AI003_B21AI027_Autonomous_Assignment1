@@ -1,0 +1,3 @@
+[INFO] [1727707777.821044164] [bi_agent]: BI Agent is ready.
+[INFO] [1727707787.696002653] [bi_agent]: Received oos navigation request for visitor visitor_586 to Building_B_Room2
+[INFO] [1727707787.696591661] [bi_agent]: Locking oos for 8 seconds for Building_B_Room2

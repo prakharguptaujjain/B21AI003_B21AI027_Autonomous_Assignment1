@@ -1,0 +1,94 @@
+import rclpy
+from rclpy.node import Node
+from agent_interfaces.srv import NavigationRequest, EscortRequest
+from ci_agent.campus_map import CampusMap
+import networkx as nx
+
+class CIAgent(Node):
+    def __init__(self):
+        super().__init__('ci_agent')
+        self.get_logger().info("CI Agent is ready.")
+        
+        # Service client to communicate with BI agent
+        self.nav_request_client = self.create_client(NavigationRequest, 'navigation_request')
+        
+        # Service to handle visitor escort requests
+        self.escort_request_srv = self.create_service(EscortRequest, 'escort_request', self.handle_escort_request)
+
+        # Initialize map
+        self.campus_map = CampusMap()
+        self.campus_map.build_campus()
+
+        # Log file for communication
+        self.log_file = open("/tmp/ci_agent_log.txt", "w")
+
+    def handle_escort_request(self, request, response):
+        visitor_id = request.visitor_id
+        building_location = request.building_location
+        self.get_logger().info(f"Received escort request from visitor {visitor_id} to building {building_location}")
+
+        # Log the request
+        self.log(f"Escort request from visitor {visitor_id} to {building_location}")
+
+        # Simulate pathfinding from the Main Gate to the Building Entrance
+        path_to_building = self.campus_map.get_shortest_path("Main_Gate", f"{building_location}_Entrance")
+        self.log(f"Path to {building_location}_Entrance: {path_to_building}")
+	
+
+        # Simulate navigation inside the building by contacting the BI agent
+        result = self.request_navigation_from_bi(building_location)
+
+        if result['authorized']:
+            response.success = True
+            response.message = f"Escorting visitor {visitor_id} to host at {building_location}."
+            self.log(f"Escorting visitor {visitor_id} to {building_location} along path: {result['path']}")
+        else:
+            response.success = False
+            response.message = f"Access denied for visitor {visitor_id}."
+            self.log(f"Access denied for visitor {visitor_id} to {building_location}")
+
+        return response
+
+    def request_navigation_from_bi(self, building_location):
+        # Request navigation inside the building
+        while not self.nav_request_client.wait_for_service(timeout_sec=1.0):
+            self.get_logger().info('Waiting for BI agent to become available...')
+        
+        req = NavigationRequest.Request()
+        req.host_location = building_location
+        req.visitor_id = "visitor_id"
+        
+        future = self.nav_request_client.call_async(req)
+        rclpy.spin_until_future_complete(self, future)
+        
+        try:
+            result = future.result()
+            return {'authorized': result.authorized, 'path': result.path}
+        except Exception as e:
+            self.get_logger().error(f"Service call failed: {e}")
+            return {'authorized': False, 'path': ''}
+
+    def log(self, message):
+        self.log_file.write(f"{message}\n")
+        self.log_file.flush()
+    def visualize_path(self, path):
+        graph = self.campus_map.get_graph()
+        pos = nx.spring_layout(graph)
+        plt.figure(figsize=(8, 8))
+        nx.draw(graph, pos, with_labels=True, node_color='skyblue', node_size=1500, font_size=10, font_weight='bold')
+        nx.draw_networkx_edges(graph, pos, edgelist=path, edge_color='green', width=3)  # Highlight the path
+
+        # Update plot
+        plt.draw()
+        plt.pause(0.01)  # Small pause for real-time update
+        plt.clf()  # Clear plot for next update
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = CIAgent()
+    rclpy.spin(node)
+    node.log_file.close()
+    rclpy.shutdown()
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,15 @@
+[INFO] [1727707776.936245494] [ci_agent]: CI Agent is ready.
+[INFO] [1727707778.675855205] [ci_agent]: Received escort request from visitor visitor_586 to building Building_B
+[INFO] [1727707778.676736017] [ci_agent]: Path to Building_B_Entrance: ['Main_Gate', 'Building_A_Entrance', 'Building_B_Entrance']
+[INFO] [1727707778.678006136] [ci_agent]: Escorting visitor visitor_586 to Building_B
+[INFO] [1727707778.678522943] [ci_agent]: Path to building: ['Main_Gate', 'Building_A_Entrance', 'Building_B_Entrance']
+[INFO] [1727707779.679452676] [ci_agent]: lamdas: [0.0, 0.2, 0.4, 0.6000000000000001, 0.8]
+[INFO] [1727707779.680098685] [ci_agent]: New positions: [(0.0, 0.0), (1.0, 2.0), (2.0, 4.0), (3.0000000000000004, 6.000000000000001), (5.0, 10.0)]
+[INFO] [1727707784.687261594] [ci_agent]: lamdas: [0.0, 0.3333333333333333, 0.6666666666666666]
+[INFO] [1727707784.687888903] [ci_agent]: New positions: [(5.0, 10.0), (6.666666666666666, 11.666666666666666), (10.0, 15.0)]
+[INFO] [1727707787.692146798] [ci_agent]: Requesting navigation to Building_B_Room2
+[INFO] [1727707788.694282373] [ci_agent]: Navigation result received: authorized=True, path=[]
+[INFO] [1727707788.694948382] [ci_agent]: Path to building saved to /tmp/visitor_586_path.pkl_ci
+[INFO] [1727707788.695591692] [ci_agent]: Navigation result: {'authorized': True, 'path': '[]'}
+[INFO] [1727707788.696221801] [ci_agent]: Escorting visitor visitor_586 to Building_B_Room2
+[INFO] [1727707788.696892610] [ci_agent]: Path to building_room: []

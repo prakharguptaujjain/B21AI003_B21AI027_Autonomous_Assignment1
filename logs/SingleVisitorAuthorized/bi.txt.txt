@@ -1,0 +1,4 @@
+[INFO] [1727706991.439412295] [bi_agent]: BI Agent is ready.
+[INFO] [1727707000.301054582] [bi_agent]: Received navigation request for visitor visitor_957 to Building_C_Room3
+[INFO] [1727707000.301767297] [bi_agent]: Access granted to visitor visitor_957 for Building_C_Room3, Path: ['Building_C_Entrance', 'Building_C_Room1', 'Building_C_Room2', 'Building_C_Room3']
+[INFO] [1727707000.302669517] [bi_agent]: Created pickle at/tmp/{visitor_id}_path.pkl_bi

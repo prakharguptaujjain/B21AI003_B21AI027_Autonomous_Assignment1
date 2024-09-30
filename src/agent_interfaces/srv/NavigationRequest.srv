@@ -1,0 +1,9 @@
+string visitor_id
+string host_location
+bool oosrequest
+int32 oosmeettime
+---
+bool authorized
+string path
+string denial_reason
+int32 ooswaittime

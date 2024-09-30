@@ -1,0 +1,4 @@
+[INFO] [1727707402.221811028] [bi_agent]: BI Agent is ready.
+[INFO] [1727707412.717812472] [bi_agent]: Received navigation request for visitor visitor_1 to Building_B_Room1
+[WARN] [1727707412.718493782] [bi_agent]: Access denied for visitor visitor_1 to Building_B_Room1
+[INFO] [1727707412.719245494] [bi_agent]: Created pickle at/tmp/{visitor_id}_path.pkl_bi
